@@ -6,8 +6,8 @@
     <base href="src">
 
     <!--ag-grid styles-->
-    <link href="node_modules/ag-grid/dist/ag-grid.css" rel="stylesheet" />
-    <link href="node_modules/ag-grid/dist/theme-fresh.css" rel="stylesheet" />
+    <link href="node_modules/ag-grid/dist/styles/ag-grid.css" rel="stylesheet" />
+    <link href="node_modules/ag-grid/dist/styles/theme-fresh.css" rel="stylesheet" />
     <link href="src/grid.css" rel="stylesheet" />
 
     <!--angular 2-->
@@ -20,6 +20,29 @@
     <script src="node_modules/ag-grid/dist/ag-grid.js"></script>
 
     <script>
+        System.config({
+            packages: {
+                lib: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                'ag-grid-ng2': {
+                    defaultExtension: "js"
+                },
+                'ag-grid': {
+                    defaultExtension: "js"
+                },
+                'ag-grid-enterprise': {
+                    defaultExtension: "js"
+                }
+            },
+            map: {
+                'ag-grid-ng2': 'node_modules/ag-grid-ng2',
+                'ag-grid-enterprise': 'node_modules/ag-grid-enterprise',
+                'ag-grid': 'node_modules/ag-grid'
+            }
+        });
+
         SystemJS.config({ packages: { src: { format: 'register', defaultExtension: 'js' } } });
         SystemJS.import('src/boot')
           .then(null, console.error.bind(console));

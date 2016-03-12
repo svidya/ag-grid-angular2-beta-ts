@@ -1,9 +1,13 @@
 ﻿import {Component} from 'angular2/core';
+import {AgGridNg2} from 'ag-grid-ng2/main';
+import {GridOptions} from 'ag-grid/main';
+
+import 'ag-grid-enterprise/main';
 
 @Component({
     selector: 'app',
     template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px"  [columnDefs]="columnDefs"   [rowData] = "rowData"></ag-grid-ng2>',
-    directives: [(<any>window).ag.grid.AgGridNg2]
+    directives: [AgGridNg2]
 })
 export class SampleAppComponent {
 
