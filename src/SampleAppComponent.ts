@@ -6,7 +6,7 @@ import 'ag-grid-enterprise/main';
 
 @Component({
     selector: 'app',
-    template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px"  [columnDefs]="columnDefs"   [rowData] = "rowData"></ag-grid-ng2>',
+    template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px" [rowGroupPanelShow]="always" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>',
     directives: [AgGridNg2]
 })
 export class SampleAppComponent {
@@ -28,4 +28,4 @@ export class SampleAppComponent {
         { make: "Toyota", model: "Celica", price: 35000 },
         { make: "Ford", model: "Mondeo", price: 32000 },
         { make: "Porsche", model: "Boxter", price: 72000 }
-    ];}
+    ];    GridOptions: GridOptions = {        columnDefs: this.columnDefs,        rowData: this.rowData        rowGroupPanelShow: 'always'    }}

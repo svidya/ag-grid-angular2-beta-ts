@@ -42,11 +42,16 @@ System.register(['angular2/core', 'ag-grid-ng2/main', 'ag-grid-enterprise/main']
                         { make: "Ford", model: "Mondeo", price: 32000 },
                         { make: "Porsche", model: "Boxter", price: 72000 }
                     ];
+                    this.GridOptions = {
+                        columnDefs: this.columnDefs,
+                        rowData: this.rowData,
+                        rowGroupPanelShow: 'always'
+                    };
                 }
                 SampleAppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px"  [columnDefs]="columnDefs"   [rowData] = "rowData"></ag-grid-ng2>',
+                        template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px" [rowGroupPanelShow]="always" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>',
                         directives: [main_1.AgGridNg2]
                     }), 
                     __metadata('design:paramtypes', [])
