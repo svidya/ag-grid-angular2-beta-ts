@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
+    "tsc:w": "tsc -w --project app",
     "lite": "lite-server"
   },
   "dependencies": {

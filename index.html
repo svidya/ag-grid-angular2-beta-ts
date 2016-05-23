@@ -44,7 +44,7 @@
         });
 
         SystemJS.config({ packages: { src: { format: 'register', defaultExtension: 'js' } } });
-        SystemJS.import('app/boot')
+        SystemJS.import('app/main')
           .then(null, console.error.bind(console));
     </script>
 </head>
