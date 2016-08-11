@@ -9,7 +9,7 @@
     "tsc:w": "tsc -w",
     "typings": "typings"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "ag-grid": "5.x.x",
     "ag-grid-ng2": "5.x.x",
