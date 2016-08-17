@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/// <reference path="../node_modules/@angular/common/index.d.ts" />
 var core_1 = require('@angular/core');
 var main_1 = require('ag-grid-ng2/main');
 var SampleAppComponent = (function () {

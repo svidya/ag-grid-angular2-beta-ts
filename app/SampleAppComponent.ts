@@ -1,5 +1,4 @@
-﻿/// <reference path="../node_modules/@angular/common/index.d.ts" />
-import {Component} from '@angular/core';
+﻿import {Component} from '@angular/core';
 import {AgGridNg2} from 'ag-grid-ng2/main';
 import {GridOptions} from 'ag-grid/main';
 
@@ -27,4 +26,9 @@ export class SampleAppComponent {
         { make: "Toyota", model: "Celica", price: 35000 },
         { make: "Ford", model: "Mondeo", price: 32000 },
         { make: "Porsche", model: "Boxter", price: 72000 }
-    ];    GridOptions: GridOptions = {        columnDefs: this.columnDefs,        rowData: this.rowData    }}
+    ];
+    GridOptions: GridOptions = {
+        columnDefs: this.columnDefs,
+        rowData: this.rowData
+    }
+}
