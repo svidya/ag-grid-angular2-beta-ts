@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var main_1 = require('ag-grid-ng2/main');
 var SampleAppComponent = (function () {
     function SampleAppComponent() {
         this.columnDefs = [
@@ -30,16 +29,11 @@ var SampleAppComponent = (function () {
             { make: "Ford", model: "Mondeo", price: 32000 },
             { make: "Porsche", model: "Boxter", price: 72000 }
         ];
-        this.GridOptions = {
-            columnDefs: this.columnDefs,
-            rowData: this.rowData
-        };
     }
     SampleAppComponent = __decorate([
         core_1.Component({
             selector: 'app',
-            template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px" [rowGroupPanelShow]="always" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>',
-            directives: [main_1.AgGridNg2]
+            template: '<h1>Grid Test</h1><ag-grid-ng2 class="ag-fresh" style="height: 300px; width: 800px;" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>'
         }), 
         __metadata('design:paramtypes', [])
     ], SampleAppComponent);

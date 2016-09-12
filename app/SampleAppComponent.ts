@@ -4,14 +4,13 @@ import {GridOptions} from 'ag-grid/main';
 
 @Component({
     selector: 'app',
-    template: '<ag-grid-ng2 class="ag-fresh" style="height: 300px" [rowGroupPanelShow]="always" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>',
-    directives: [AgGridNg2]
+    template: '<h1>Grid Test</h1><ag-grid-ng2 class="ag-fresh" style="height: 300px; width: 800px;" [columnDefs]="columnDefs"  [rowData] = "rowData"></ag-grid-ng2>'
 })
 export class SampleAppComponent {
 
     columnDefs = [
-        { headerName: "Make", field: "make" },
-        { headerName: "Model", field: "model" },
+        {headerName: "Make", field: "make"},
+        {headerName: "Model", field: "model"},
         {
             headerName: "Price",
             field: "price",
@@ -23,12 +22,12 @@ export class SampleAppComponent {
     ];
     // put data directly onto the controller
     rowData = [
-        { make: "Toyota", model: "Celica", price: 35000 },
-        { make: "Ford", model: "Mondeo", price: 32000 },
-        { make: "Porsche", model: "Boxter", price: 72000 }
+        {make: "Toyota", model: "Celica", price: 35000},
+        {make: "Ford", model: "Mondeo", price: 32000},
+        {make: "Porsche", model: "Boxter", price: 72000}
     ];
-    GridOptions: GridOptions = {
-        columnDefs: this.columnDefs,
-        rowData: this.rowData
-    }
+    // gridOptions: GridOptions = {
+    //     columnDefs: this.columnDefs,
+    //     rowData: this.rowData
+    // }
 }
